@@ -1,0 +1,11 @@
+/*jshint esversion: 6 */
+//importamos las variables:
+@import "../../../scss/index.scss";
+
+.menu-sider {
+  position: fixed;
+  left: 0;
+  top: 64px;
+  height: 100vh;
+  overflow: auto;
+}

@@ -1,0 +1,52 @@
+@import "../../../scss/index.scss";
+
+.register-form {
+  text-align: left;
+
+  .ant-form-item {
+    //para seleccionar solo el 4to hijo y el último de los items que tienen la class:
+    &:nth-child(4),
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__input {
+    .ant-input-prefix {
+      //esto modifica el icono
+      i {
+        font-size: 0em + 22px / $defaultFontSize;
+      }
+    }
+
+    input {
+      font-size: 0em + 20px / $defaultFontSize;
+      padding: 5px 5px 5px 5px !important;
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: blue($color: $colorBlueSecondary);
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    font-size: 0em + 22px / $defaultFontSize;
+    background-color: $colorBluePrimary;
+    color: $font-light;
+    height: 42px;
+
+    &:hover {
+      background-color: $primary-color-hover;
+      color: $font-light;
+    }
+
+    &:focus,
+    &:active {
+      //esto afecta a focus y active
+      background-color: $colorBluePrimary;
+      color: $font-light;
+      border: 0;
+    }
+  }
+}

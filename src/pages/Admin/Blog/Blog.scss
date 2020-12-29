@@ -1,0 +1,10 @@
+@import "../../../scss/index.scss";
+
+.blog {
+  margin-right: 50px;
+
+  &__add-post {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+}

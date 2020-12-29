@@ -1,0 +1,52 @@
+@import "../../../scss/index.scss";
+
+.menu-top {
+  // background-color: $menu-color;
+  //para que todo esté en la misma linea:
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 10px;
+  scroll-padding-bottom: 15px;
+  width: auto;
+
+  //configuramos los botones:
+  button {
+    background-color: transparent;
+    color: $font-light;
+    border: 0;
+    font-size: 20px;
+    line-height: 0px;
+    padding: 7px 17px 4px 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    //Hover es cuando el cursor pasa sobre el botón
+    &:hover {
+      color: $colorBlueSecondary;
+    }
+    //focurs o active es cuando se activa el link
+    &:focus,
+    &:active {
+      color: $colorBlueSecondary;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    &-logo {
+      width: 350px;
+      padding: 20px;
+    }
+  }
+
+  &__right {
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+
+    padding: 20px;
+  }
+}

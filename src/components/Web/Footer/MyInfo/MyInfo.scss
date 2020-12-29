@@ -1,0 +1,20 @@
+@import "../../../../index.scss";
+
+.my-info {
+  img {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    margin-bottom: 0px;
+    color: $primary-color-dark;
+  }
+
+  //   para darle una nueva clase a un componente que ya tiene una clase, hacemos una referencia:
+  .social-links {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  //es decir, a la clase de social-links que está dentro de .my-info, le vamos a dar las modificaciones
+}

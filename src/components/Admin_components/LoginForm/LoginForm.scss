@@ -1,0 +1,47 @@
+/*jshint esversion: 6 */
+//importamos las variables:
+@import "../../../scss/index.scss";
+
+.login-form {
+  .ant-form-item :last-of-type {
+    margin: 0;
+  }
+
+  &__input {
+    .ant-input-prefix {
+      i {
+        form-size: 0em + 22px / $defaultFontSize;
+      }
+    }
+
+    input {
+      font-size: 0em + 20px / $defaultFontSize;
+      padding: 5px 5px 5px 5px !important;
+      &focus {
+        border-color: $colorBluePrimary;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    font-size: 0em + 22px / $defaultFontSize;
+    //font-size se puede resumir haciendo un mixing, revisar documentación
+    background-color: $colorBluePrimary;
+    color: $font-light;
+    height: 50px;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: $primary-color-hover;
+      color: $font-light;
+    }
+    &:focus,
+    &:active {
+      background-color: $colorBluePrimary;
+      color: $font-light;
+      border: 0;
+    }
+  }
+}

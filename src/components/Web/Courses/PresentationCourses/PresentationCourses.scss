@@ -1,0 +1,18 @@
+@import "../../../../scss/index.scss";
+
+.presentation-courses {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+
+  img {
+    width: 150px;
+  }
+
+  p {
+    padding-top: 20px;
+    font-size: 1.3rem;
+    color: $primary-color-dark;
+    font-weight: bold;
+  }
+}
