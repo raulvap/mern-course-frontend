@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { Spin, List, notification } from "antd";
+import { Spin, Row, List, notification } from "antd";
 import { Link } from "react-router-dom";
 // import { Helmet } from "react-helmet";
 import moment from "moment";
@@ -65,6 +65,7 @@ export default function PostsListWeb(props) {
       <div className='posts-list-web'>
         <h1>Blog</h1>
         <List
+          itemLayout='horizontal'
           dataSource={posts.docs}
           renderItem={(post) => <Post post={post} />}
         />
@@ -86,13 +87,15 @@ function Post(props) {
 
   return (
     <List.Item className='post'>
-      <div className='post__date'>
-        <span>{day}</span>
-        <span>{month}</span>
-      </div>
-      <Link to={`blog/${post.url}`}>
-        <List.Item.Meta title={post.title} />
-      </Link>
+      <Row>
+        <div className='post__date'>
+          <span>{day}</span>
+          <span>{month}</span>
+        </div>
+        <Link to={`blog/${post.url}`}>
+          <List.Item.Meta title={post.title} />
+        </Link>
+      </Row>
     </List.Item>
   );
 }

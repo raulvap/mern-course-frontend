@@ -33,11 +33,13 @@ export default function MenuTop(props) {
           onClick={() => setMenuCollapsed(!menuCollapsed)}>
           {menuCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
         </Button>
-        <img
-          className='menu-top__left-logo'
-          src={LogoDTech}
-          alt='logo Development & Technology'
-        />
+        <a href='/'>
+          <img
+            className='menu-top__left-logo'
+            src={LogoDTech}
+            alt='logo Development & Technology'
+          />
+        </a>
       </div>
       <div className='menu-top__right'>
         <Button type='link' onClick={logoutUser}>

@@ -47,6 +47,7 @@ export default function PostLists(props) {
   return (
     <div className='post-lists'>
       <List
+        itemLayout='horizontal'
         dataSource={posts.docs}
         renderItem={(post) => (
           <Post post={post} deletePost={deletePost} editPost={editPost} />
