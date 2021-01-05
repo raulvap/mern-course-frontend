@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 //debemos englobar el componente con "withRouter" para que nos diga en que página estamos:
 import { withRouter } from "react-router-dom";
@@ -81,30 +82,40 @@ function Blog(props) {
   }
 
   return (
-    <div>
-      <div className='blog'>
-        <div className='blog__add-post'>
-          <Button type='primary' onClick={addPost}>
-            Crear Post
-          </Button>
-        </div>
-
-        <PostLists
-          posts={posts}
-          setReloadPosts={setReloadPosts}
-          editPost={editPost}
+    <>
+      <Helmet>
+        <title>Blog | Admin</title>
+        <meta
+          name='description'
+          content='Dtech Academy, desarrolla tus habilidades tecnológicas'
+          data-react-helmet='true'
         />
-        <Pagination posts={posts} location={location} history={history} />
+      </Helmet>
+      <div>
+        <div className='blog'>
+          <div className='blog__add-post'>
+            <Button type='primary' onClick={addPost}>
+              Crear Post
+            </Button>
+          </div>
 
-        <Modal
-          title={modalTitle}
-          isVisible={isVisibleModal}
-          setIsVisible={setIsVisibleModal}
-          width='50%'>
-          {modalContent}
-        </Modal>
+          <PostLists
+            posts={posts}
+            setReloadPosts={setReloadPosts}
+            editPost={editPost}
+          />
+          <Pagination posts={posts} location={location} history={history} />
+
+          <Modal
+            title={modalTitle}
+            isVisible={isVisibleModal}
+            setIsVisible={setIsVisibleModal}
+            width='50%'>
+            {modalContent}
+          </Modal>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

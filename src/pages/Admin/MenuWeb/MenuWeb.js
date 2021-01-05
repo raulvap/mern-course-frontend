@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { getMenuApi } from "../../../api/menu";
 
 //import components:
@@ -21,8 +22,18 @@ export default function MenuWeb() {
   }, [reloadMenuWeb]);
 
   return (
-    <div className='menu-web'>
-      <MenuWebList menu={menu} setReloadMenuWeb={setReloadMenuWeb} />
-    </div>
+    <>
+      <Helmet>
+        <title>Menu | Admin</title>
+        <meta
+          name='description'
+          content='Dtech Academy, desarrolla tus habilidades tecnológicas'
+          data-react-helmet='true'
+        />
+      </Helmet>
+      <div className='menu-web'>
+        <MenuWebList menu={menu} setReloadMenuWeb={setReloadMenuWeb} />
+      </div>
+    </>
   );
 }

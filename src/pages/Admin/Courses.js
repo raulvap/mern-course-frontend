@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 //import components:
 import CoursesList from "../../components/Admin_components/Courses/CoursesList";
@@ -21,8 +22,18 @@ export default function Courses() {
   }, [reloadCourses]);
 
   return (
-    <div className='courses'>
-      <CoursesList courses={courses} setReloadCourses={setReloadCourses} />
-    </div>
+    <>
+      <Helmet>
+        <title>Cursos | Admin</title>
+        <meta
+          name='description'
+          content='Dtech Academy, desarrolla tus habilidades tecnológicas'
+          data-react-helmet='true'
+        />
+      </Helmet>
+      <div className='courses'>
+        <CoursesList courses={courses} setReloadCourses={setReloadCourses} />
+      </div>
+    </>
   );
 }

@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>DTech Academy</title>
+        <title>Web App by Raul Vap</title>
         <meta
           name='description'
           content='Dtech Academy, desarrolla tus habilidades tecnológicas'

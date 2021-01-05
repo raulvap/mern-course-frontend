@@ -55,7 +55,7 @@ export default function PostsListWeb(props) {
   return (
     <>
       <Helmet>
-        <title>Blog | DTech</title>
+        <title>Blog | DTech Academy</title>
         <meta
           name='description'
           content='Blog, últimas noticias del mundo de desarollo'

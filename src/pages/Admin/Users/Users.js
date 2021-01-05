@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 //importamos la función para obtener el Token del usuario para mandarlo a la petición:
 import { getAccessTokenApi } from "../../../api/auth";
 //importamos el API:
@@ -30,12 +31,22 @@ export default function Users() {
   }, [token, reloadUsers]);
 
   return (
-    <div className='users'>
-      <ListUsers
-        usersActive={usersActive}
-        usersInactive={usersInactive}
-        setReloadUsers={setReloadUsers}
-      />
-    </div>
+    <>
+      <Helmet>
+        <title>Usuarios | Admin</title>
+        <meta
+          name='description'
+          content='Dtech Academy, desarrolla tus habilidades tecnológicas'
+          data-react-helmet='true'
+        />
+      </Helmet>
+      <div className='users'>
+        <ListUsers
+          usersActive={usersActive}
+          usersInactive={usersInactive}
+          setReloadUsers={setReloadUsers}
+        />
+      </div>
+    </>
   );
 }
